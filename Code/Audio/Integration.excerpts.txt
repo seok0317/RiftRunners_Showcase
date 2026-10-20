@@ -1,0 +1,31 @@
+// 코드 및 설계 전시용 원문 발췌. 빌드 대상이 아닙니다.
+// 생략된 함수·선언·외부 타입은 원본 프로젝트에 의존합니다.
+// 각 조각 사이의 원본 코드와 제어 흐름은 생략되어 있으며, 이를 새 코드로 연결하지 않았습니다.
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Ability/GA_BossPhaseTransitionBase.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 7-7] 원본 파일의 일부 구간 — 전체 함수임을 뜻하지 않습니다.
+#include "GameCore/Audio/MusicParameterEvent.h"
+
+// [원문 8-41 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 42-47] UGA_BossPhaseTransitionBase::ActivateAbility — 전체 함수임을 뜻하지 않습니다.
+	// 실행 조건을 확인한 뒤 서버에서 요청한다. 이후 전환 취소 시 음악을 자동 복원하지 않는다.
+	if (Boss->HasAuthority() && IsValid(TransitionMusicEvent))
+	{
+		TransitionMusicEvent->Execute(Boss);
+	}
+
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Ability/GA_BossPhaseTransitionBase.h
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 10-10] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+class UMusicParameterEvent;
+
+// [원문 11-14 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 15-15] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+ * 전환 음악 요청, 재배치, 앵커 Offset 이동, 이동 완료 후 섹션 전환, 몽타주 종료를 담당한다.
+
+// [원문 16-42 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 43-44] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+	/** 전환 시작 시 실행할 음악 변경 DA. 미지정 시 기존 음악을 유지한다. */
+	UPROPERTY(EditDefaultsOnly, Category = "Phase Transition|Audio") TObjectPtr<UMusicParameterEvent> TransitionMusicEvent;

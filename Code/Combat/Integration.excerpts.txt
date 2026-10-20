@@ -1,0 +1,72 @@
+// 코드 및 설계 전시용 원문 발췌. 빌드 대상이 아닙니다.
+// 생략된 함수·선언·외부 타입은 원본 프로젝트에 의존합니다.
+// 각 조각 사이의 원본 코드와 제어 흐름은 생략되어 있으며, 이를 새 코드로 연결하지 않았습니다.
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/BasePlayerState.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 245-245] ABasePlayerState::SetVitals — 전체 함수임을 뜻하지 않습니다.
+void ABasePlayerState::SetVitals(float NewHealth, float NewMaxHealth, float NewHealthCapMultiplier)
+
+// [원문 246-247 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 248-249] ABasePlayerState::SetVitals — 전체 함수임을 뜻하지 않습니다.
+		&& FMath::IsNearlyEqual(Vitals.MaxHealth, NewMaxHealth)
+		&& FMath::IsNearlyEqual(Vitals.HealthCapMultiplier, NewHealthCapMultiplier))
+
+// [원문 250-255 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 256-258] ABasePlayerState::SetVitals — 전체 함수임을 뜻하지 않습니다.
+	Vitals.HealthCapMultiplier = NewHealthCapMultiplier;
+
+	UE_LOG(LogTemp, Warning, TEXT("[SetVitals] Server updated Vitals and Broadcasting! Health: %f"), Vitals.Health);
+
+// [원문 259-260 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 261-261] ABasePlayerState::SetVitals — 전체 함수임을 뜻하지 않습니다.
+	OnVitalsChanged.Broadcast(Vitals.Health, Vitals.MaxHealth, Vitals.HealthCapMultiplier);
+
+// [원문 262-265 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 266-267] ABasePlayerState::OnRep_Vitals — 전체 함수임을 뜻하지 않습니다.
+	UE_LOG(LogTemp, Warning, TEXT("[OnRep_Vitals] Client received Vitals! Health: %f"), Vitals.Health);
+	OnVitalsChanged.Broadcast(Vitals.Health, Vitals.MaxHealth, Vitals.HealthCapMultiplier);
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/BasePlayerState.h
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 1-1] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+#pragma once
+
+// [원문 2-22 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 23-25] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+
+	UPROPERTY(BlueprintReadOnly)
+	float HealthCapMultiplier = 1.0f;
+
+// [원문 26-27 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 28-28] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnPlayerVitalsChanged, float, Health, float, MaxHealth, float, HealthCapMultiplier);
+
+// [원문 29-152 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 153-155] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+	UFUNCTION(BlueprintPure, Category = "Vitals")
+	float GetHealthCapMultiplier() const { return Vitals.HealthCapMultiplier; }
+
+
+// [원문 156-160 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 161-161] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+	void SetVitals(float NewHealth, float NewMaxHealth, float NewHealthCapMultiplier);
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Character/MonsterCharacter.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 40-40] AMonsterCharacter::AMonsterCharacter — 전체 함수임을 뜻하지 않습니다.
+		MeshComp->SetCollisionResponseToChannel(ECC_TraceAttack, ECR_Block);
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Weapon/Libraries/WeaponFireLibrary.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 71-71] 원본 파일의 일부 구간 — 전체 함수임을 뜻하지 않습니다.
+		const FVector TargetPoint = World->LineTraceSingleByChannel(AimHit, ViewLocation, ViewEnd, ECC_TraceAttack, QueryParams)
+
+// [원문 72-98 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 99-99] 원본 파일의 일부 구간 — 전체 함수임을 뜻하지 않습니다.
+		return World->LineTraceSingleByChannel(OutHit, Start, End, ECC_TraceAttack, QueryParams);
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Weapon/Trajectory/WeaponTrajectoryPreviewComponent.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 134-134] UWeaponTrajectoryPreviewComponent::DrawTrajectory — 전체 함수임을 뜻하지 않습니다.
+		ECC_TraceAttack,

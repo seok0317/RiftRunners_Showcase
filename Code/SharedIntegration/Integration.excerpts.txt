@@ -1,0 +1,21 @@
+// 코드 및 설계 전시용 원문 발췌. 빌드 대상이 아닙니다.
+// 생략된 함수·선언·외부 타입은 원본 프로젝트에 의존합니다.
+// 각 조각 사이의 원본 코드와 제어 흐름은 생략되어 있으며, 이를 새 코드로 연결하지 않았습니다.
+
+// 원본 파일: Source/TeamProject_Fin/TeamProject_Fin.Build.cs
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 28-28] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+			"AudioModulation",
+
+// [원문 29-34 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 35-35] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+			"RenderCore",
+
+// [원문 36-36 생략: 이 사이의 제어 흐름은 재구성하지 않음]
+// [원문 37-39] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+			"ChaosCaching",
+			"CableComponent",
+			"ProceduralMeshComponent",
+// 아래 구간은 본인 수정 당시 커밋 c95bad1cfbaa2039cbaf96d3f129ad368f0f06bd의 원문입니다.
+// [원문 43-43] 선언·설정 조각 — 전체 함수임을 뜻하지 않습니다.
+		PrivateDependencyModuleNames.AddRange(new string[] { "FMODStudio" });

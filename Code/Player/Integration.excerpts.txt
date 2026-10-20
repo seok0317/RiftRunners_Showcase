@@ -1,0 +1,20 @@
+// 코드 및 설계 전시용 원문 발췌. 빌드 대상이 아닙니다.
+// 생략된 함수·선언·외부 타입은 원본 프로젝트에 의존합니다.
+// 각 조각 사이의 원본 코드와 제어 흐름은 생략되어 있으며, 이를 새 코드로 연결하지 않았습니다.
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Ability/GA_Fire.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 21-21] UGA_Fire::UGA_Fire — 전체 함수임을 뜻하지 않습니다.
+	ActivationBlockedTags.AddTag(GameplayTagSystem::State_Dead);
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Ability/GA_Interact.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 22-24] UGA_Interact::UGA_Interact — 전체 함수임을 뜻하지 않습니다.
+	// 몽타주 교체 전에 구르기의 루트모션과 상태를 취소 경로로 정리한다.
+	CancelAbilitiesWithTag.AddTag(GameplayTagSystem::Ability_Movement_Dodge);
+
+
+// 원본 파일: Source/TeamProject_Fin/GameCore/Ability/GA_Reload.cpp
+// 기준 커밋: 265059d8a3305a45c8f6c890590f4074069a3a88
+// [원문 20-20] UGA_Reload::UGA_Reload — 전체 함수임을 뜻하지 않습니다.
+	ActivationBlockedTags.AddTag(GameplayTagSystem::State_Dead);
