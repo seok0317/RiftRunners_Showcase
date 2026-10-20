@@ -15,9 +15,9 @@
 
 ## 영상 / 포트폴리오
 
-[![플레이 영상](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[![플레이 영상](https://img.youtube.com/vi/9dl48De07AI/maxresdefault.jpg)](https://youtu.be/9dl48De07AI)
 
-- 📑 [포트폴리오 PDF](PORTFOLIO_PDF_URL)
+- 📑 [포트폴리오 PDF](https://drive.google.com/file/d/1b_Zf6JZfVh7HFR_H3uMXUwzI3EfcuTa7/view?usp=sharing)
 
 ## 담당 역할
 
